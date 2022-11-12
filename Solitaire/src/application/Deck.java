@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javafx.scene.image.Image;
@@ -9,7 +10,6 @@ import javafx.scene.image.Image;
 public class Deck {
 	
 	private ArrayList<Card> deck;
-	private Image Backofcard;
 	
 	public Deck(ArrayList<Card> deck) {
 		this.deck = deck;
@@ -34,6 +34,14 @@ public class Deck {
 				deck.add(new Card(face, suit));
 			}
 		}
-	
 	}	
+	
+	
+	public void shuffle(){
+		Collections.shuffle(deck);
+	}
+	
+	
+	
+	
 }

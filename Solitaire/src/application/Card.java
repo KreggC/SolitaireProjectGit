@@ -10,11 +10,15 @@ public class Card {
 	private String face;
 	private String suit;
 	private Image faceImage;
+	private Image CardBack;
 	
 	
 	public Card(String face, String suit) { 
 		this.face = face;
 		this.suit = suit;
+		String cardimage= face+suit;
+		this.faceImage = (new Image("/images/"+cardimage+".png"));
+		this.CardBack = (new Image("/images/cardback.png"));
 	}
 
 
