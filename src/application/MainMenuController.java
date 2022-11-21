@@ -22,7 +22,10 @@ public class MainMenuController implements Initializable {
 	
 	private Stage stage;
 	private Scene scene;
+	
+	@FXML
 	private Parent root;
+	
 
 	// Event Listener on Button.onAction
 	@FXML

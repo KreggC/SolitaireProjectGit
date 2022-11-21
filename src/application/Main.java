@@ -19,13 +19,11 @@ public class Main extends Application {
 			
 			Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 			Scene scene = new Scene(root);
-		
 			primaryStage.setTitle("Solitaire");
 			primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/icon.png")));
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
-		
 		} catch(Exception e) {			
 			e.printStackTrace();	
 		}
@@ -36,6 +34,8 @@ public class Main extends Application {
 	
 	
 	public static void main(String[] args) {
+		Deck deck = new Deck();
+		deck.shuffle();
 		launch(args);
 	}
 }

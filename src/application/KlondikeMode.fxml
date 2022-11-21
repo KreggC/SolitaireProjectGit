@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.Button?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KlondikeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KlondikeModeController">
    <children>
-      <ImageView fitHeight="720.0" fitWidth="1280.0">
+      <ImageView fitHeight="720.0" fitWidth="1280.0" onMouseClicked="#DeckClicked">
          <image>
             <Image url="@../images/KlondikeBackground.png" />
          </image>
       </ImageView>
-      <Button fx:id="TestButton" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" onAction="#TestClicked" prefHeight="50.0" prefWidth="30.0" contentDisplay="CENTER">
-          <graphic>
-              <ImageView fx:id="buttonImage" fitHeight="200.0" fitWidth="150.0">
-                  <Image url="@../images/10c.png"/>
-              </ImageView>
-          </graphic>
-      </Button>
-      <ImageView fx:id="defaultview" fitHeight="93" fitWidth="93" pickOnBounds="true" preserveRatio="true" onMouseClicked='#imagePicker'>
-          <Image url="@../images/4s.png"/>
-      </ImageView>
+      <ImageView fx:id="WasteImage" fitHeight="148.0" fitWidth="113.0" layoutX="220.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="DeckImage" fitHeight="148.0" fitWidth="113.0" layoutX="39.0" layoutY="67.0" onMouseClicked="#DeckClicked" pickOnBounds="true" preserveRatio="true" />
+      <MenuBar fx:id="MenuBar" accessibleRole="LIST_ITEM" prefHeight="25.0" prefWidth="1280.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#RestartClicked" text="Restart" />
+                  <MenuItem mnemonicParsing="false" onAction="#MainMenuClicked" text="Exit to Menu" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#GameClose" text="Quit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

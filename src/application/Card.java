@@ -10,15 +10,13 @@ public class Card {
 	private String face;
 	private String suit;
 	private Image faceImage;
-	private Image CardBack;
 	
 	
 	public Card(String face, String suit) { 
 		this.face = face;
 		this.suit = suit;
-		String cardimage= face+suit;
-		this.faceImage = (new Image("/images/"+cardimage+".png"));
-		this.CardBack = (new Image("/images/cardback.png"));
+		String cardimage= face+suit+".png";
+		faceImage = new Image("file:src/images/"+cardimage);
 	}
 
 
@@ -30,6 +28,18 @@ public class Card {
 	 */
 	
 	
+	public Image getFaceImage() {
+		return faceImage;
+	}
+
+
+
+	public void setFaceImage(Image faceImage) {
+		this.faceImage = faceImage;
+	}
+
+
+
 	public void setFace(String face) {
 		List<String> ValidFace = ValidFace();
 		if(ValidFace.contains(face))		
