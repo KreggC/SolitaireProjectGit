@@ -23,7 +23,7 @@
             <Font size="27.0" />
          </font>
       </Button>
-      <Button layoutX="510.0" layoutY="332.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" text="Vegas">
+      <Button layoutX="510.0" layoutY="332.0" mnemonicParsing="false" onAction="#VegasClicked" prefHeight="50.0" prefWidth="261.0" text="Vegas">
          <font>
             <Font size="27.0" />
          </font>

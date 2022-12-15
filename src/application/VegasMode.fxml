@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VegasModeController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@../images/KlondikeBackground.png" />
+         </image>
+      </ImageView>
+          <ImageView fx:id="WasteImageVegas" fitHeight="148.0" fitWidth="113.0" layoutX="220.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="DeckImageVegas" fitHeight="148.0" fitWidth="113.0" layoutX="39.0" layoutY="67.0" onMouseClicked="#DeckClicked" pickOnBounds="true" preserveRatio="true" />
+      <MenuBar fx:id="VegasMenuBar" prefHeight="16.0" prefWidth="1280.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+                  <MenuItem id="VegasRestart" fx:id="VegasMenuBarReset" mnemonicParsing="false" onAction="#VegasRestartButton" text="Restart" />
+                  <MenuItem mnemonicParsing="false" onAction="#VegasMenu" text="Exit to Menu" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

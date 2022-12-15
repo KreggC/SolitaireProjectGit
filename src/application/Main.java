@@ -1,6 +1,7 @@
 package application;
 	
 import java.io.File;
+import java.util.Arrays;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +23,7 @@ public class Main extends Application {
 			primaryStage.setTitle("Solitaire");
 			primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/icon.png")));
 			primaryStage.setScene(scene);
+			primaryStage.setResizable(false);
 			primaryStage.show();
 			
 		} catch(Exception e) {			
@@ -29,13 +31,10 @@ public class Main extends Application {
 		}
 		
 	}
-	
-	
-	
-	
+
 	public static void main(String[] args) {
-		Deck deck = new Deck();
-		deck.shuffle();
-		launch(args);
+		 
+	launch(args);
+	
 	}
 }

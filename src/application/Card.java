@@ -10,13 +10,37 @@ public class Card {
 	private String face;
 	private String suit;
 	private Image faceImage;
+	private String color;
+	
 	
 	
 	public Card(String face, String suit) { 
 		this.face = face;
 		this.suit = suit;
-		String cardimage= face+suit+".png";
+		
+		    /*
+		     * Try and catch to set a color after the card is initially constructed
+		     */
+		
+		try {
+			if(suit.contains("h")) this.color = "Red";
+			else if(suit.contains("d")) this.color = "Red";
+			else this.color = "Black";
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+			/*
+			 * Try and catch to after card is initially constructed to set card image using the face and suit
+			 */
+			
+		}
+		try {	
+			String cardimage= face+suit+".png";
 		faceImage = new Image("file:src/images/"+cardimage);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	
 	}
 
 

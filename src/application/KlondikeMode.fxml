@@ -21,8 +21,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="Menu">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#RestartClicked" text="Restart" />
-                  <MenuItem mnemonicParsing="false" onAction="#MainMenuClicked" text="Exit to Menu" />
+                  <MenuItem mnemonicParsing="false" onAction="#restartClicked" text="Restart" />
+                  <MenuItem mnemonicParsing="false" onAction="#mainMenuClicked" text="Exit to Menu" />
                   <SeparatorMenuItem mnemonicParsing="false" />
               <MenuItem mnemonicParsing="false" onAction="#GameClose" text="Quit" />
             </items>

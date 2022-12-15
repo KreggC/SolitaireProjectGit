@@ -54,6 +54,19 @@ public class MainMenuController implements Initializable {
 		}		
 		
 	}
+	public void VegasClicked(ActionEvent event) {
+		try {
+			root = FXMLLoader.load(getClass().getResource("VegasMode.fxml"));
+			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+				
+	}
 	
 	/*
 	 * @FXML public void cardImage() {

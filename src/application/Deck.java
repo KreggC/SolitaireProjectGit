@@ -56,6 +56,7 @@ public class Deck {
 	}
 	
 	
+	
 	public void shuffle(){
 		Collections.shuffle(deck);
 	}
@@ -66,6 +67,15 @@ public class Deck {
 
 	public void setBackImage(Image backImage) {
 		BackImage = backImage;
+	}
+	public void printDeck() {
+		for(int i = 0; i > deck.size(); i++) {
+			System.out.println(deck.get(i));}
+	}
+	
+	public String toString() {
+		return deck.toString();
+	
 	}
 
 }
